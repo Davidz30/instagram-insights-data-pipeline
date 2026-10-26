@@ -3,6 +3,9 @@ on:
   push:
   pull_request:
   workflow_dispatch:
+concurrency:
+  group: security-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
@@ -34,6 +37,11 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+      - name: Verify Python sources are present
+        run: |
+          find src -type f -name '*.py' -print
+          test -s src/carga_instagram_midias.py
+          test -s src/carga_insights_conta.py
       - uses: github/codeql-action/init@v3
         with:
           languages: python
