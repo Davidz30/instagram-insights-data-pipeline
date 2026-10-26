@@ -17,7 +17,7 @@ Status: **NOT APPROVED FOR PUBLIC RELEASE**.
 - [x] Confirm pytest, dependency audit, Bandit, and detect-secrets checks passed in GitHub Actions run #21 (commit `f7e33cf`); current-file scanner does not cover historical versions.
 - [ ] Confirm Meta and SQL credentials previously used in development have not been exposed; rotate any exposed credentials.
 - [x] Repository owner elected to skip end-to-end testing of the independent demo. The original production implementation was reportedly tested, but the published demo has **not** been functionally validated; disclose this limitation in README.
-- [ ] Decide license only after confirming intellectual property ownership and publication authorization.
+- [x] Owner selected portfolio-only publication, without an open-source license; README states all rights reserved and no reuse permission.
 - [ ] Review GitHub Actions and repository settings again after any visibility change.
 - [ ] Obtain explicit approval from repository owner before switching to public.
 
