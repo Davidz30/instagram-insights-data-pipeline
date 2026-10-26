@@ -16,7 +16,7 @@ Status: **NOT APPROVED FOR PUBLIC RELEASE**.
 - [x] Gitleaks full-history scan passed (manual GitHub Actions run #1, commit `84f4dc1`); no leaks detected by configured rules.
 - [x] Confirm pytest, dependency audit, Bandit, and detect-secrets checks passed in GitHub Actions run #21 (commit `f7e33cf`); current-file scanner does not cover historical versions.
 - [ ] Confirm Meta and SQL credentials previously used in development have not been exposed; rotate any exposed credentials.
-- [ ] Verify the demonstration using disposable accounts and a test database; static checks do not establish runtime correctness.
+- [x] Repository owner elected to skip end-to-end testing of the independent demo. The original production implementation was reportedly tested, but the published demo has **not** been functionally validated; disclose this limitation in README.
 - [ ] Decide license only after confirming intellectual property ownership and publication authorization.
 - [ ] Review GitHub Actions and repository settings again after any visibility change.
 - [ ] Obtain explicit approval from repository owner before switching to public.
