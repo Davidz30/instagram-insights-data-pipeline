@@ -12,6 +12,7 @@ Status: **NOT APPROVED FOR PUBLIC RELEASE**.
 - [ ] Obtain written permission from the relevant rights holder to publish code derived from work projects.
 - [ ] Review all commit history and any branches/tags for secrets and internal information.
 - [ ] Run a dedicated secret scanner on the full Git history, not only current files.
+- [ ] Confirm the new pytest and detect-secrets GitHub Actions run passes (commit `35482b5`); the new scanner currently checks tracked files, not all historical versions.
 - [ ] Confirm Meta and SQL credentials previously used in development have not been exposed; rotate any exposed credentials.
 - [ ] Verify the demonstration using disposable accounts and a test database; static checks do not establish runtime correctness.
 - [ ] Decide license only after confirming intellectual property ownership and publication authorization.
