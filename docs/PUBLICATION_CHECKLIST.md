@@ -9,10 +9,11 @@ Status: **NOT APPROVED FOR PUBLIC RELEASE**.
 - [x] GitHub Actions syntax, pip-audit and Bandit passed on commit `7a976a3`.
 
 ## Required before publication
-- [ ] Obtain written permission from the relevant rights holder to publish code derived from work projects.
-- [ ] Review all commit history and any branches/tags for secrets and internal information.
+- [x] Repository owner stated that company authorization to publish exists (not independently verified).
+- [x] Manually inspect 25 available commits for known internal identifiers (no matches found).
+- [ ] Verify any additional branches/tags and run a dedicated full-history secret scanner; manual pattern matching is not sufficient.
 - [ ] Run a dedicated secret scanner on the full Git history, not only current files.
-- [ ] Confirm the new pytest and detect-secrets GitHub Actions run passes (commit `35482b5`); the new scanner currently checks tracked files, not all historical versions.
+- [x] Confirm pytest, dependency audit, Bandit, and detect-secrets checks passed in GitHub Actions run #21 (commit `f7e33cf`); current-file scanner does not cover historical versions.
 - [ ] Confirm Meta and SQL credentials previously used in development have not been exposed; rotate any exposed credentials.
 - [ ] Verify the demonstration using disposable accounts and a test database; static checks do not establish runtime correctness.
 - [ ] Decide license only after confirming intellectual property ownership and publication authorization.
