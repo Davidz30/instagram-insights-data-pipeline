@@ -11,8 +11,9 @@ Status: **NOT APPROVED FOR PUBLIC RELEASE**.
 ## Required before publication
 - [x] Repository owner stated that company authorization to publish exists (not independently verified).
 - [x] Manually inspect 25 available commits for known internal identifiers (no matches found).
-- [ ] Verify any additional branches/tags and run a dedicated full-history secret scanner; manual pattern matching is not sufficient.
-- [ ] Run a dedicated secret scanner on the full Git history, not only current files.
+- [x] GitHub branch search returned only `main` at time of review.
+- [ ] Verify whether tags or other refs exist before publication.
+- [x] Gitleaks full-history scan passed (manual GitHub Actions run #1, commit `84f4dc1`); no leaks detected by configured rules.
 - [x] Confirm pytest, dependency audit, Bandit, and detect-secrets checks passed in GitHub Actions run #21 (commit `f7e33cf`); current-file scanner does not cover historical versions.
 - [ ] Confirm Meta and SQL credentials previously used in development have not been exposed; rotate any exposed credentials.
 - [ ] Verify the demonstration using disposable accounts and a test database; static checks do not establish runtime correctness.
